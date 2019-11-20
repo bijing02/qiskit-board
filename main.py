@@ -40,14 +40,13 @@ while is_running: # the main game loop
                 print("X gate!")
                 game.on_key("x", game.initial_world, SCREEN)
                 # SCREEN.blit(IMAGE, (0, 0))
-            elif event.key == pygame.K_c:
-                print("C gate!")
-                if event.key == pygame.K_x:
-                    print("CX gate!")
-                    game.on_key("cx", game.initial_world, SCREEN)
-                elif event.key == pygame.K_z:
-                    print("CX gate!")
-                    game.on_key("cz", game.initial_world, SCREEN)
+             elif event.key == pygame.K_y:
+                print("Y gate!")
+                game.on_key("y", game.initial_world, SCREEN)
+                
+             elif event.key == pygame.K_cx:
+                print("CX gate!")
+                game.on_key("cx", game.initial_world, SCREEN)
 
     if BIG_BANG.stop_when == True:
         is_running = False
